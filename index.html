@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+
+  <!-- These lines are what Google shows in search results -->
+  <title>THE DINO – Free Dinosaur Fruit-Catching Game</title>
+  <meta name="description" content="THE DINO is a free browser game. Drag the blue dinosaur to catch falling fruit, dodge the bombs, grab shields and beat all 3 levels. Play instantly on computer or phone - no download.">
+
+  <!-- How the link looks when it is shared on social media or in a chat -->
+  <meta property="og:title" content="THE DINO – Free Dinosaur Fruit-Catching Game">
+  <meta property="og:description" content="Drag the dinosaur, catch the fruit, dodge the bombs. Play free in your browser.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#141239">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦖</text></svg>">
+
+  <!-- Fonts (the same on every computer and phone) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@900&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game {
+      display: block;
+      touch-action: none;          /* dragging with a finger moves the dino, not the page */
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* Text for Google and screen readers: it is on the page but not drawn on top of the game */
+    .about {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="game" width="1280" height="720" aria-label="THE DINO game"></canvas>
+
+  <div class="about">
+    <h1>THE DINO – a free dinosaur game you can play in your browser</h1>
+    <p>Drag the blue dinosaur to catch falling apples, bananas and grapes. Every fruit is +1 FOOD.
+       Dodge the bombs! Reach 35 FOOD for level 2, 65 FOOD for level 3 where shields appear,
+       and 100 FOOD to win. Works with a mouse or a finger on a phone or tablet.</p>
+  </div>
+
+  <noscript>THE DINO needs JavaScript turned on to play.</noscript>
+
+  <script src="game.js"></script>
+</body>
+</html>
